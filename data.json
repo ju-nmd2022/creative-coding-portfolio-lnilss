@@ -1,7 +1,32 @@
 [
   {
-    "file": "experiments/example.js",
-    "name": "Name of your experiment",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "file": "example.js",
+    "name": "Example",
+    "description": "An example provided by Garrit that introduces us to motion and rotation in p5 generative art."
+  },
+  {
+    "file": "liveCodeExample.js",
+    "name": "Flower",
+    "description": "A live coding example provided by Bassima that uses rectangles to create petals and for loops to create repetition, resulting in a flower shape."
+  },
+  {
+    "file": "molnar.js",
+    "name": "Vera Molnar Squares",
+    "description": "A recreation of an artwork by Vera Molnar, as demonstrated by Garrit. A grid is used with squares that overlap each other and become smaller as it reaches the center. The squares have an asymmetry and slight variation to them using variance."
+  },
+  {
+    "file": "noise_01.js",
+    "name": "Perlin Noise Landscape",
+    "description": "An example from Garrit that demonstrates the use of Perlin noise and noiseSeeds. Multiple small lines are drawn from one point to another on the x-axis using a for loop and are given pseudorandom points on the y-axis using Math.random. This results in a natural landscape effect."
+  },
+  {
+    "file": "noise_02.js",
+    "name": "Perlin Noise Depth",
+    "description": "Another example from Garrit showing how Perlin noise can be used to create depth and shading. Points are scattered with varying sizes, allowing for a visual effect that looks almost 3d while remaining in 2d."
+  },
+  {
+    "file": "noise_03.js",
+    "name": "Perlin Noise Smoke",
+    "description": "Final noise example from Garrit that animates the same points from noise_02 and allows for fluidity on the canvas, emulating the moving nature of smoke or clouds."
   }
 ]
