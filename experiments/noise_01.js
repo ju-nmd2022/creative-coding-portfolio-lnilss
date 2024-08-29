@@ -8,7 +8,7 @@ function draw() {
     const originalY = 300; //perlin noise
     const divider = 60;
 
-    //tip, whenever we recreate this value it stays the same
+    //tip: whenever we recreate this value it stays the same
     noiseSeed(4);
     //draw custom shape
     beginShape();
