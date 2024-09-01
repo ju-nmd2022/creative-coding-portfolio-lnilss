@@ -1,38 +1,47 @@
-//grid
-//decreased square with slight variation
-//around 10 steps
-//no gap
-
-//Molnar recreation
+//Molnar recreation with shaky lines
 
 //values
-const size = 100; //what should size be? parameters are good for reusing code
+const size = 100;
 const layers = 10;
 
 function getRandomValue(pos, variance) {
     return pos + map(Math.random(), 0, 1, -variance, variance); //maps from one system to a different one
 }
+
+//the following 11 lines of code were adapted from Claude.ai https://claude.site/artifacts/5a887f90-7808-4d4f-a303-d4d6c322cb05
+function drawShakyLine(x1, y1, x2, y2, variance) {
+  const steps = 3;
+    beginShape();
+    for (let i = 0; i <= steps; i++) {
+        const t = i / steps;
+        const x = x1 + (x2 - x1) * t;
+        const y = y1 + (y2 - y1) * t;
+        vertex(getRandomValue(x, variance), getRandomValue(y, variance));
+    }
+    endShape();
+}
+
 function drawLayers(x, y, size, layers) {
     //to not calculate over and over
 
     const variance = size / 20;
 
     noFill();
-    // rectMode(CENTER); we will not use this and instead use own calculations
+    
     for (let i = 0; i < layers; i++) {
-        if (Math.random())
-        const originalSize = (size / layers) * i;
-        const half = originalSize / 2; //own calculation
-        beginShape();
-        vertex(getRandomValue(x - half, variance), getRandomValue(y - half, variance)); //we can manipulate all of the edges
-        vertex(getRandomValue(x - half, variance), getRandomValue(y + half, variance));
-        vertex(getRandomValue(x + half, variance), getRandomValue(y + half, variance));
-        vertex(getRandomValue(x + half, variance), getRandomValue(y - half, variance));
-        endShape(CLOSE);
-        // rect(x - half, y - half, originalSize, originalSize);
+      if (random() > 0.8) {
+        continue;
     }
-}
+    const s = (size / layers) * i;
+    const half = s / 2;
 
+    drawShakyLine(x - half, y - half, x + half, y - half, variance);
+    drawShakyLine(x + half, y - half, x + half, y + half, variance);
+    drawShakyLine(x + half, y + half, x - half, y + half, variance);
+    drawShakyLine(x - half, y + half, x - half, y - half, variance);
+}
+}
+     
 function setup() {
     createCanvas(1000,1000);
 }
@@ -40,11 +49,11 @@ function setup() {
 function draw() {
     background(255,255,255);
 
-    // drawLayers(100, 100, size, layers);
     for (let y = 0; y < 10; y++) {
         for (let x = 0; x < 10; x++) {
-            drawLayers(x * size, y * size, size, layers);
-            }    }
+          drawLayers(size / 2 + x * size, size / 2 + y * size, size, layers);
+        }
+      }
 
     noLoop();
 }

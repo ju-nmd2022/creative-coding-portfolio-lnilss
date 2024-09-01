@@ -1,3 +1,5 @@
+//this code was partially created using Claude.ai https://claude.site/artifacts/dadf0c91-53c1-42e5-96d0-f9ef39458796
+
 function setup() {
     createCanvas(600, 600);
     colorMode(HSB, 360, 360, 360);
@@ -42,6 +44,7 @@ function draw() {
 
 
         for (let j = 0; j < amountX; j++) {
+            //the following 9 lines of code were adapted from Claude.ai
             let rowOffset = colorOffset * 1 + i * 0.2 + j * 0.2;
             
             let seedValue = i * amountX + j;

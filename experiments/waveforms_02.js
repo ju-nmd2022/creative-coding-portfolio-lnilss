@@ -4,11 +4,11 @@ function setup() {
 
     const originalY = -250;
     const divider = 150;
-    const numRows = 30;
+    const numRows = 20;
 
-    let gap = 40;
+    let gap = 100;
     let amountX = 1;
-    let amountY = 12;
+    let amountY = 5;
 
 
 function waveforms() {

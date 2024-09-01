@@ -1,10 +1,5 @@
 [
   {
-    "file": "example.js",
-    "name": "Example",
-    "description": "An example provided by Garrit that introduces us to motion and rotation in p5 generative art."
-  },
-  {
     "file": "liveCodeExample.js",
     "name": "Flower",
     "description": "A live coding example provided by Bassima that uses rectangles to create petals and for loops to create repetition, resulting in a flower shape."
@@ -13,6 +8,11 @@
     "file": "molnar.js",
     "name": "Vera Molnar Squares",
     "description": "A recreation of an artwork by Vera Molnar, as demonstrated by Garrit. A grid is used with squares that overlap each other and become smaller as it reaches the center. The squares have an asymmetry and slight variation to them using variance."
+  },
+  {
+    "file": "molnar_02.js",
+    "name": "Vera Molnar Shaky Lines",
+    "description": "A recreation of an artwork by Vera Molnar. The majority of the code was created by Garrit. My twist on things is adding some noise to create shaky lines."
   },
   {
     "file": "noise_01.js",
@@ -28,5 +28,20 @@
     "file": "noise_03.js",
     "name": "Perlin Noise Smoke",
     "description": "Final noise example from Garrit that animates the same points from noise_02 and allows for fluidity on the canvas, emulating the moving nature of smoke or clouds."
+  },
+  {
+    "file": "waveforms_01.js",
+    "name": "Curtain",
+    "description": "Inspired by Manfred Mohr's use of noise and lines, this piece creates a 3-dimensional look of curtains."
+  },
+  {
+    "file": "waveforms_02.js",
+    "name": "Sound",
+    "description": "Inspired by Manfred Mohr. Multiple lines, random HSB colours, and Perlin noise make for psychedelic curves, resembling that of soundwaves."
+  },
+  {
+    "file": "waveforms_03.js",
+    "name": "Vibes",
+    "description": "Inspired by Manfred Mohr. A built upon version of 'Sound' with proper movements and a gradient effect."
   }
 ]

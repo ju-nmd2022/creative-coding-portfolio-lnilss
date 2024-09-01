@@ -19,7 +19,7 @@ function flower() {
                 fill(0, 10, 250);
                 rect(x, y, 10, 20);
 
-                fill(230, random(20, 200), 100);
+                fill(230, random(20, 200), 1);
                 ellipse(x, y, 3);
 
 
