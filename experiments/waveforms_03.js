@@ -1,5 +1,6 @@
 function setup() {
     createCanvas(600, 600);
+    colorMode(HSB, 360, 360, 360);
 }
 
     const originalY = -250;
@@ -13,16 +14,16 @@ function setup() {
     let colorOffset = 0;
 
 
-function waveforms() {
+function waveforms(rowOffset) {
     for (let row = 0; row < numRows; row++) {
-        let noiseIncrease = map(row, 10, numRows - 1, 100, height);
+        let noiseIncrease = map(row, 0, numRows - 1, 400, height);
         // let originalY = row;
     
         beginShape();
         for (let x = 0; x < 600; x++) {
         // const y = originalY + Math.random() * 100;
         //noise function from p5
-        const y = originalY + noise(x / divider) * noiseIncrease;
+        const y = originalY + noise(x / divider + rowOffset, row * 0.01 + colorOffset) * noiseIncrease;
         vertex(x, y);
         }
         endShape();
@@ -41,7 +42,8 @@ function draw() {
 
 
         for (let j = 0; j < amountX; j++) {
-            //the following 6 lines of code were adapted using Claude.ai
+            let rowOffset = colorOffset * 1 + i * 0.2 + j * 0.2;
+            
             let seedValue = i * amountX + j;
             noiseSeed(seedValue);
 
@@ -52,11 +54,11 @@ function draw() {
 
             push();
             translate(x,y);
-            waveforms();
+            waveforms(rowOffset);
             pop();
             x += numRows + gap;
         }
         y += numRows + gap;
     }
-    colorOffset += 0.03;
+    colorOffset += 0.01;
 }
