@@ -7,7 +7,7 @@
   {
     "file": "experiments/molnar.js",
     "name": "Vera Molnar Squares",
-    "description": "A recreation of an artwork by Vera Molnar, as demonstrated by Garrit. A grid is used with squares that overlap each other and become smaller as it reaches the center. The squares have an asymmetry and slight variation to them using variance."
+    "description": "A recreation of an artwork by Vera Molnar, as originally demonstrated by Garrit. A grid is used with squares that overlap each other and become smaller as it reaches the center. The squares have an asymmetry and slight variation to them using variance. In this version, the squares change colour and size using loops, framerate control, and blend modes."
   },
   {
     "file": "experiments/molnar_02.js",
