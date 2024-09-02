@@ -5,29 +5,29 @@
     "description": "A live coding example provided by Bassima that uses rectangles to create petals and for loops to create repetition, resulting in a flower shape."
   },
   {
-    "file": "experiments/molnar.js",
+    "file": "experiments/molnar_01.js",
     "name": "Vera Molnar Squares",
-    "description": "A recreation of an artwork by Vera Molnar, as originally demonstrated by Garrit. A grid is used with squares that overlap each other and become smaller as it reaches the center. The squares have an asymmetry and slight variation to them using variance. In this version, the squares change colour and size using loops, framerate control, and blend modes."
+    "description": "A recreation of an artwork by Vera Molnar, as originally demonstrated by Garrit Schaap. A grid is used with squares that overlap each other and become smaller as it reaches the center. The squares have an asymmetry and slight variation to them using variance. In this version, the squares change colour and size using loops, framerate control, and blend modes."
   },
   {
     "file": "experiments/molnar_02.js",
     "name": "Vera Molnar Shaky Lines",
-    "description": "A recreation of an artwork by Vera Molnar. The majority of the code was created by Garrit. My twist on things is adding some noise to create shaky lines."
+    "description": "A recreation of an artwork by Vera Molnar. The majority of the code was created by Garrit Schaap. My twist on things is adding some noise to create shaky lines."
   },
   {
     "file": "experiments/noise_01.js",
     "name": "Perlin Noise Landscape",
-    "description": "An example from Garrit that demonstrates the use of Perlin noise and noiseSeeds. Multiple small lines are drawn from one point to another on the x-axis using a for loop and are given pseudorandom points on the y-axis using Math.random. This results in a natural landscape effect."
+    "description": "An example from Garrit Schaap that demonstrates the use of Perlin noise and noiseSeeds. Multiple small lines are drawn from one point to another on the x-axis using a for loop and are given pseudorandom points on the y-axis using Math.random. This results in a natural landscape effect."
   },
   {
     "file": "experiments/noise_02.js",
     "name": "Perlin Noise Depth",
-    "description": "Another example from Garrit showing how Perlin noise can be used to create depth and shading. Points are scattered with varying sizes, allowing for a visual effect that looks almost 3d while remaining in 2d."
+    "description": "Another example from Garrit Schaap showing how Perlin noise can be used to create depth and shading. Points are scattered with varying sizes, allowing for a visual effect that looks almost 3d while remaining in 2d."
   },
   {
     "file": "experiments/noise_03.js",
     "name": "Perlin Noise Smoke",
-    "description": "Final noise example from Garrit that animates the same points from noise_02 and allows for fluidity on the canvas, emulating the moving nature of smoke or clouds."
+    "description": "Final noise example from Garrit Schaap that animates the same points from noise_02 and allows for fluidity on the canvas, emulating the moving nature of smoke or clouds."
   },
   {
     "file": "experiments/waveforms_01.js",
@@ -43,5 +43,11 @@
     "file": "experiments/waveforms_03.js",
     "name": "Vibes",
     "description": "Inspired by Manfred Mohr. A built upon version of 'Sound' with proper movements and a gradient effect."
+  },
+  {
+    "file": "experiments/hobbs_01.js",
+    "name": "Feathering",
+    "description": "Inspired by Tyler Hobbs. Using code by Garrit Schaap and ChatGPT prompts, I was able to create a randomised flow field that allows black strokes to 'feather' out."
   }
+  
 ]
