@@ -20,17 +20,31 @@ function drawLayers(x, y, size, layers) {
     noFill();
     // rectMode(CENTER); we will not use this and instead use own calculations
     for (let i = 0; i < layers; i++) {
-        if (Math.random())
-        const originalSize = (size / layers) * i;
-        const half = originalSize / 2; //own calculation
+        if (Math.random() > 0.8) {
+          continue;
+        }
+        const s = (size / layers) * i;
+        const half = s / 2;
         beginShape();
-        vertex(getRandomValue(x - half, variance), getRandomValue(y - half, variance)); //we can manipulate all of the edges
-        vertex(getRandomValue(x - half, variance), getRandomValue(y + half, variance));
-        vertex(getRandomValue(x + half, variance), getRandomValue(y + half, variance));
-        vertex(getRandomValue(x + half, variance), getRandomValue(y - half, variance));
+        vertex(
+          getRandomValue(x - half, variance),
+          getRandomValue(y - half, variance)
+        );
+        vertex(
+          getRandomValue(x + half, variance),
+          getRandomValue(y - half, variance)
+        );
+        vertex(
+          getRandomValue(x + half, variance),
+          getRandomValue(y + half, variance)
+        );
+        vertex(
+          getRandomValue(x - half, variance),
+          getRandomValue(y + half, variance)
+        );
         endShape(CLOSE);
-        // rect(x - half, y - half, originalSize, originalSize);
-    }
+        // rect(x - half, y - half, s, s);
+      }
 }
 
 function setup() {
@@ -43,8 +57,9 @@ function draw() {
     // drawLayers(100, 100, size, layers);
     for (let y = 0; y < 10; y++) {
         for (let x = 0; x < 10; x++) {
-            drawLayers(x * size, y * size, size, layers);
-            }    }
+          drawLayers(size / 2 + x * size, size / 2 + y * size, size, layers);
+        }
+      }
 
     noLoop();
 }
