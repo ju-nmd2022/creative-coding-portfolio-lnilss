@@ -10,7 +10,7 @@ const maxRows = Math.ceil(innerHeight / fieldSize);
 let flowField = [];
 const numSteps = 20; 
 const stepLength = 5;
-const noiseScale = 0.002;
+const noiseScale = 0.004;
 const numCurves = 4000;
 const divider = 200;
 
@@ -20,19 +20,10 @@ function setup() {
   rows = maxRows;
   flowField = new Array(cols * rows);
 
+  blendMode(ADD);
+
   generateFlowField();
   noLoop();
-}
-
-function draw() {
-  background(255);
-  
-  // Draw the curves
-  for (let i = 0; i < numCurves; i++) {
-    let startX = random(width);
-    let startY = random(height);
-    drawCurve(startX, startY);
-  }
 }
 
 //the following 14 lines of code were adapted using ChatGPT
@@ -55,13 +46,13 @@ function drawCurve(startX, startY) {
   let y = startY;
 
   noFill();
-  stroke(0);
-  strokeWeight(0.5);
+  stroke(250, 30, 40);
+  strokeWeight(2);
 
   beginShape();
   vertex(x, y);
   
-  //the following 19 lines of code were provided by Garrit Schaap
+  //the following 19 lines of code were provided by Garrit Schaap and ChatGPT
   for (let n = 0; n < numSteps; n++) {
     let xOffset = x - (width / 2 - cols * fieldSize / 2);
     let yOffset = y - (height / 2 - rows * fieldSize / 2);
@@ -73,8 +64,8 @@ function drawCurve(startX, startY) {
 
     let gridAngle = flowField[colIndex + rowIndex * cols].heading();
 
-    let xStep = stepLength * cos(gridAngle);
-    let yStep = stepLength * sin(gridAngle);
+    let xStep = stepLength * cos(gridAngle); //angle for x
+    let yStep = stepLength * sin(gridAngle); //angle for y
 
     x += xStep;
     y += yStep;
@@ -83,4 +74,15 @@ function drawCurve(startX, startY) {
   }
 
   endShape();
+}
+
+function draw() {
+  background(200, 80, 160);
+  
+  // Draw the curves
+  for (let i = 0; i < numCurves; i++) {
+    let startX = random(width);
+    let startY = random(height);
+    drawCurve(startX, startY);
+  }
 }
