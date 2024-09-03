@@ -47,7 +47,12 @@
   {
     "file": "experiments/hobbs_01.js",
     "name": "Feathering",
-    "description": "Inspired by Tyler Hobbs. Using code by Garrit Schaap and ChatGPT prompts, I was able to create a randomised flow field that allows black strokes to 'feather' out."
+    "description": "Inspired by Tyler Hobbs. Using code by Garrit Schaap and ChatGPT prompts, I was able to create a randomised flow field that allows pink strokes to 'feather' out. An ADD blend mode was added for a gradient effect."
+  },
+  {
+    "file": "experiments/hobbs_02.js",
+    "name": "Attempted Escape",
+    "description": "Inspired by Tyler Hobbs. Black and white lines overlap each other to create depth, almost like layered scratches, using code from Claude.ai prompts."
   }
   
 ]
