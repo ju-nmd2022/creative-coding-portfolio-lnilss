@@ -63,5 +63,10 @@
 		"file": "experiments/cellularAutomata.js",
 		"name": "Follow Your Heart",
 		"description": "An example from Garrit that uses Cellular Automata and Boid classes to allow free flowing hearts to follow a mouse, die, and regenerate."
+	},
+	{
+		"file": "experiments/waveforms_04.js",
+		"name": "Speaking Waves",
+		"description": "An example from Garrit that uses ToneJS (waveforms and frequency) and expands on a recreation of an artwork by Manfred Mohr."
 	}
 ]
