@@ -67,6 +67,11 @@
 	{
 		"file": "experiments/waveforms_04.js",
 		"name": "Speaking Waves",
+		"description": "An example from Garrit that uses ToneJS (frequency) and expands on a recreation of an artwork by Manfred Mohr."
+	},
+	{
+		"file": "experiments/waveforms_05.js",
+		"name": "Speaking Waves V.2",
 		"description": "An example from Garrit that uses ToneJS (waveforms and frequency) and expands on a recreation of an artwork by Manfred Mohr."
 	}
 ]
